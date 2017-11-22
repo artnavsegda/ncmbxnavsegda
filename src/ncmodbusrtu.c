@@ -20,6 +20,13 @@ int main(int argc, char *argv[])
 		modbus_free(mb);
 		exit(1);
 	}
+	initscr();
+	noecho();
+	curs_set(FALSE);
+	keypad(stdscr, TRUE);
+	atexit(endwin);
+
+	endwin();
 	return 0;
 }
 
