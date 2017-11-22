@@ -1,0 +1,2 @@
+# ncmbxnavsegda
+Ncurses Modbus frontend
