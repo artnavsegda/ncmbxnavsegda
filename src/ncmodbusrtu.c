@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 #include <errno.h>
 #include <ncurses.h>
 #include <modbus/modbus.h>
@@ -25,6 +26,14 @@ int main(int argc, char *argv[])
 	curs_set(FALSE);
 	keypad(stdscr, TRUE);
 	atexit(endwin);
+
+	while(1)
+	{
+		clear();
+		mvprintw(10,10,"Hello world");
+		refresh();
+		sleep(1);
+	}
 
 	endwin();
 	return 0;
